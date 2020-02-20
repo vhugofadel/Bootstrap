@@ -1,0 +1,27 @@
+.sidebar{
+    width: 100%;
+}
+
+
+@media (min-width: 576px) { 
+    
+    
+ }
+
+@media (min-width: 768px) { 
+
+
+    .sidebar{
+        width: 300px;
+        height: 100vh;
+    }
+
+ }
+
+@media (min-width: 992px) {
+
+    
+
+  }
+
+@media (min-width: 1200px) {  }

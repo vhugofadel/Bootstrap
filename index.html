@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/vitor.css">
+    <script src="./js/bootstrap.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $(window).resize(function () {
+
+                if (window.matchMedia('screen and (max-width: 767px)').matches) {
+
+                    $(".sidebar").css({ width: "100%" });
+                    $(".sidebar").css("display", "none");
+
+                } else {
+
+                    $(".sidebar").css({ width: "300px" });
+                    $(".sidebar").css("display", "block");
+
+                }
+
+            });
+
+
+            $("#btnToggle").click(function () {
+
+                if (window.matchMedia('screen and (max-width: 767px)').matches) {
+
+                    if ($(".sidebar").css("display") == "none") {
+
+                        $(".sidebar").slideDown();
+
+                    } else {
+                        
+                        $(".sidebar").slideUp();
+
+                    }
+
+                } else {
+
+                    if ($(".sidebar").css("width") == "300px") {
+                        $(".sidebar").animate({ width: "0px" });
+
+                    } else {
+
+                        $(".sidebar").css("display", "block");
+                        $(".sidebar").animate({ width: "300px" });
+
+                    }
+
+                }
+            });
+
+        });
+
+    </script>
+
+</head>
+
+
+
+<body class="container-fluid">
+
+
+    <div class="row" style="background: red;">
+
+        <div style="background: green;" class="sidebar">
+            dasdsa
+        </div>
+
+
+
+        <div class="col p-2" style="background:blue;">
+
+            <button class="btn btn-primary" id="btnToggle">
+                <i class="fas fa-align-justify"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+</body>
+
+
+</html>
