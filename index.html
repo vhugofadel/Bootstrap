@@ -15,17 +15,23 @@
 
         $(document).ready(function () {
 
+            $('.has-subnav').click(function(){
+
+                $(this).next("ul").slideToggle();
+
+            });
+
             $(window).resize(function () {
 
                 if (window.matchMedia('screen and (max-width: 767px)').matches) {
 
-                    $(".sidebar").css({ width: "100%" });
-                    $(".sidebar").css("display", "none");
+                    $("#sidebar").css({ width: "100%" });
+                    $("#sidebar").css("display", "none");
 
                 } else {
 
-                    $(".sidebar").css({ width: "300px" });
-                    $(".sidebar").css("display", "block");
+                    $("#sidebar").css({ width: "300px" });
+                    $("#sidebar").css("display", "block");
 
                 }
 
@@ -36,25 +42,25 @@
 
                 if (window.matchMedia('screen and (max-width: 767px)').matches) {
 
-                    if ($(".sidebar").css("display") == "none") {
+                    if ($("#sidebar").css("display") == "none") {
 
-                        $(".sidebar").slideDown();
+                        $("#sidebar").slideDown();
 
                     } else {
 
-                        $(".sidebar").slideUp();
+                        $("#sidebar").slideUp();
 
                     }
 
                 } else {
 
-                    if ($(".sidebar").css("width") == "300px") {
-                        $(".sidebar").animate({ width: "0px" });
+                    if ($("#sidebar").css("width") == "300px") {
+                        $("#sidebar").animate({ width: "0px" });
 
                     } else {
 
-                        $(".sidebar").css("display", "block");
-                        $(".sidebar").animate({ width: "300px" });
+                        $("#sidebar").css("display", "block");
+                        $("#sidebar").animate({ width: "300px" });
 
                     }
 
@@ -71,22 +77,49 @@
 
 <body class="container-fluid">
 
+    <div class="row">
 
-    <div class="row" style="">
+        <div id="sidebar">
 
-        <div style="" class="sidebar">
-
-            <nav class="navbar-nav navbar-light">
-                <a class="navbar-brand mx-auto"><img class="" style="height: 80px;" src="./images/irexlogo.png"/></a>
+            <nav class="navbar-nav ">
+                <a class="navbar-brand mx-auto"><img class="" style="height: 80px;" src="https://d2ji7bmwt474gm.cloudfront.net/island/irex/20190102503/images/logos/irex-logo-white.png"/></a>
                 <ul class="navbar-nav">
-                    <li class="nav-item mx-auto border-bottom">
-                        <a class="nav-link" href="#"><i class="fab fa-monero mr-2"></i>Financeiro</a>
+                    <li class="nav-item">
+                        <a class="nav-link p-3 border-bottom text-light has-subnav" href="#"><i class="fab fa-monero mr-2"></i>Financeiro</a>
+
+                        <ul class="navbar-nav bg-white subnav">
+                            <li class="nav-item">
+                                <a class="nav-link pl-3 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Financeiro</a>
+                            </li>
+                        </ul>
+
                     </li>
-                    <li class="nav-item p-2 pl-3  border-bottom">
-                        <a class="nav-link" href="#"><i class="fas fa-user mr-2"></i>Vendas</a>
+                    <li class="nav-item">
+                        <a class="nav-link p-3 border-bottom text-light has-subnav" href="#"><i class="fas fa-user mr-2"></i>Vendas</a>
+                        <ul class="navbar-nav bg-white subnav">
+                            <li class="nav-item">
+                                <a class="nav-link pl-3 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Financeiro</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="nav-item p-2 pl-3 border-bottom">
-                        <a class="nav-link" href="#"><i class="fas fa-ribbon mr-2"></i>Estoque</a>
+
+                    <li class="nav-item">
+                        
+                        <a class="nav-link p-3 border-bottom text-light has-subnav" href="#"><i class="fas fa-ribbon mr-2"></i>Estoque</a>
+                        
+                        <ul class="navbar-nav bg-white subnav">
+                           
+                            <li class="nav-item">
+                                <a class="nav-link pl-3 border-bottom sub-link has-subnav" href="#"><i class="fab fa-monero mr-2"></i>Financeiro</a>
+                                
+                                <ul class="navbar-nav bg-white subnav">
+                                    <li class="nav-item">
+                                        <a class="nav-link pl-3 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Relatório de Cobrança de Dívidas para clientes pouco requisitados mas as vezes pode até tirar bastante</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>

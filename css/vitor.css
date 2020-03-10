@@ -1,4 +1,4 @@
-.sidebar{
+#sidebar{
     width: 100%;
 }
 
@@ -11,7 +11,7 @@
 @media (min-width: 768px) { 
 
 
-    .sidebar{
+    #sidebar{
         width: 300px;
         height: 100vh;
     }
@@ -25,3 +25,17 @@
   }
 
 @media (min-width: 1200px) {  }
+
+.sub-link{
+    color:  rgba(116,134,230,0.82);
+}
+
+.subnav{
+    display: none;
+}
+
+#sidebar{
+
+    background-color: rgba(28,206,234,0.82);
+   background: linear-gradient(-45deg, rgba(147,26,222,0.83) 0%, rgba(28,206,234,0.82) 100%);
+}
