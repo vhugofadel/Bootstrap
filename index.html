@@ -18,6 +18,8 @@
 
             $('.has-subnav').click(function(){
 
+                $(this).toggleClass("collapsed");
+
                 $(this).next("ul").slideToggle();
 
             });
@@ -90,7 +92,7 @@
 
                         <ul class="navbar-nav bg-white subnav">
                             <li class="nav-item">
-                                <a class="nav-link pl-3 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Financeiro</a>
+                                <a class="nav-link p-3 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Financeiro</a>
                             </li>
                         </ul>
 
@@ -106,18 +108,40 @@
 
                     <li class="nav-item">
                         
-                        <a class="nav-link p-3 border-bottom text-light has-subnav" href="#"><i class="fas fa-ribbon mr-2"></i>Estoque</a>
+                        <a class="nav-link p-3 border-bottom text-light has-subnav" href="#">
+                            <i class="fas fa-ribbon mr-2"></i>Estoque testaremos <i class="fas fa-angle-right sidebar-dropdown-arrow"></i>
+                        </a>
                         
                         <ul class="navbar-nav bg-white subnav">
                            
                             <li class="nav-item">
-                                <a class="nav-link pl-3 border-bottom sub-link has-subnav" href="#"><i class="fab fa-monero mr-2"></i>Financeiro</a>
+                                <a class="nav-link p-3 border-bottom sub-link has-subnav" href="#"><i class="fab fa-monero mr-2"></i>Financeiro
+                                    <i class="fas fa-angle-right sidebar-dropdown-arrow"></i></a>
                                 
-                                <ul class="navbar-nav bg-white subnav">
-                                    <li class="nav-item">
-                                        <a class="nav-link pl-3 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Relatório de Cobrança de Dívidas para clientes pouco requisitados mas as vezes pode até tirar bastante</a>
-                                    </li>
-                                </ul>
+                                    <ul class="navbar-nav bg-white subnav">
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-3 p-2 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Relatório de Cobrança de Dívidas para clientes pouco requisitados mas as vezes pode até tirar bastante</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-3 p-2 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Relatório de Cobrança de Dívidas para clientes pouco requisitados mas as vezes pode até tirar bastante</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-3 p-2 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Relatório de Cobrança de Dívidas para clientes pouco requisitados mas as vezes pode até tirar bastante</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-3 p-2 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Relatório de Cobrança de Dívidas para clientes pouco requisitados mas as vezes pode até tirar bastante</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-3 p-2 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Relatório de Cobrança de Dívidas para clientes pouco requisitados mas as vezes pode até tirar bastante</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-3 p-2 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Relatório de Cobrança de Dívidas para clientes pouco requisitados mas as vezes pode até tirar bastante</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link pl-3 p-2 border-bottom sub-link" href="#"><i class="fab fa-monero mr-2"></i>Relatório de Cobrança de Dívidas para clientes pouco requisitados mas as vezes pode até tirar bastante</a>
+                                        </li>
+                                    </ul>
 
                             </li>
                         </ul>
@@ -142,7 +166,7 @@
 
 
 
-        <div class="col p-2" style="background:blue;">
+        <div class="col p-2" id="main">
 
             <button class="btn btn-primary" id="btnToggle">
                 <i class="fas fa-align-justify"></i>
