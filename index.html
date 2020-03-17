@@ -26,15 +26,16 @@
 
             $(window).resize(function () {
 
-                if (window.matchMedia('screen and (max-width: 767px)').matches) {
+                if (window.matchMedia('screen and (min-width: 768px)').matches) {
 
-                    $("#sidebar").css({ width: "100%" });
-                    $("#sidebar").css("display", "none");
-
-                } else {
 
                     $("#sidebar").css({ width: "300px" });
                     $("#sidebar").css("display", "block");
+
+                } else {
+
+                    $("#sidebar").css({ width: "100%" });
+                    $("#sidebar").css("display", "none");
 
                 }
 
@@ -43,19 +44,7 @@
 
             $("#btnToggle").click(function () {
 
-                if (window.matchMedia('screen and (max-width: 767px)').matches) {
-
-                    if ($("#sidebar").css("display") == "none") {
-
-                        $("#sidebar").slideDown();
-
-                    } else {
-
-                        $("#sidebar").slideUp();
-
-                    }
-
-                } else {
+                if (window.matchMedia('screen and (min-width: 768px)').matches) {
 
                     if ($("#sidebar").css("width") == "300px") {
                         $("#sidebar").animate({ width: "0px" });
@@ -67,6 +56,19 @@
 
                     }
 
+                } else {
+
+
+                    if ($("#sidebar").css("display") == "none") {
+
+                        $("#sidebar").slideDown();
+                        
+
+                    } else {
+
+                        $("#sidebar").slideUp();
+
+                    }
                 }
             });
 
@@ -187,16 +189,18 @@
 
         <div class="col p-0 bg-white" id="main">
 
-            <nav class="navbar navbar-expand-md d-flex justify-content-between" style="color: white; background: rgba(65, 100, 244);">
+            <nav class="navbar header-bar d-flex justify-content-between" style="color: white;">
 
                 <button class="btn btn-primary" id="btnToggle">
                     <i class="fas fa-align-justify"></i>
                 </button>
 
-                <div class="nav-item d-flex">
+                <div class="nav-item d-flex header-empresa">
 
                     <div class="p-3">
-                        <span class="d-block">INDUSTRIA E COMERCIO DE BEBIDAS FUNADA LTDA</span>
+                        <span class="d-block"
+                            style="overflow: hidden; height: 25px; text-align: right; max-width: 400px;">INDUSTRIA E
+                            COMERCIO DE BEBIDAS FUNADA LTDA COM UM NOME BEM GRANDE PRA TESTAR E TUDO MAIS</span>
                         <span class="d-block text-right" style="font-weight: lighter;">03.417.760/0001-97</span>
                     </div>
 
@@ -206,21 +210,23 @@
 
                 </div>
 
-                <div class="nav-item d-flex">
+                <div class="nav-item ml-auto d-flex">
 
                     <div class="p-3">
-                        <span class="d-block">Vitor Hugo Fadel</span>
+                        <span class="d-block" style=" overflow: hidden; height: 25px; text-align: right;">Vitor Hugo
+                            Fadel</span>
                         <span class="d-block text-right" style="font-weight: lighter;">Sair</span>
                     </div>
 
                 </div>
 
+            </nav>
+
+            <div class="main-content">
+                asdasdsadas
+            </div>
+
         </div>
-        </nav>
-
-    </div>
-
-    </div>
 
 
     </div>
