@@ -2,9 +2,17 @@
     width: 100%;
 }
 
+body{
+    background: red;
+}
+
+
 @media (min-width: 576px) { 
     
-    
+    body{
+        background: orange;
+    }
+
  }
 
 @media (min-width: 768px) { 
@@ -15,15 +23,29 @@
         min-height: 100vh ;
     }
 
+    body{
+        background: yellow;
+    }
+    
+    #main-header-nav{
+        flex-direction: row !important;
+    }
+    
  }
 
 @media (min-width: 992px) {
 
     
+    body{
+        background: green;
+    }
 
   }
 
-@media (min-width: 1200px) {  }
+@media (min-width: 1200px) { 
+    body{
+        background: blue;
+    } }
 
 .sub-link{
     color:  rgba(116,134,230,0.82);
