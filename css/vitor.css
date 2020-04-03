@@ -30,7 +30,12 @@ body{
         flex-direction: row !important;
     }
     
- }
+    .dropdown-empresa-nome{
+        width: 400px;
+
+    }
+
+}
 
 @media (min-width: 992px) {
 
@@ -78,3 +83,8 @@ body{
     
   }
   
+
+  #main-header-nav .dropdown button::before{
+      color: white;
+      transform: rotate(-90deg);
+  }
