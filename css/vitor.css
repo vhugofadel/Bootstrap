@@ -3,14 +3,14 @@
 }
 
 body{
-    background: red;
+    /* background: red; */
 }
 
 
 @media (min-width: 576px) { 
     
     body{
-        background: orange;
+        /* background: orange; */
     }
 
  }
@@ -23,7 +23,7 @@ body{
     }
 
     body{
-        background: yellow;
+        /* background: yellow; */
     }
     
     #main-header-nav{
@@ -41,18 +41,19 @@ body{
 
     
     body{
-        background: green;
+        /* background: green; */
     }
 
   }
 
 @media (min-width: 1200px) { 
     body{
-        background: blue;
-    } }
+        /* background: blue; */
+    } 
+}
 
 .sub-link{
-    color:  rgba(116,134,230,0.82);
+    color:  #808080;
 }
 
 .subnav{
@@ -62,10 +63,17 @@ body{
 
 #sidebar{
 
-   background-color: #007bff;
-   background: linear-gradient(-45deg, rgba(147,26,222,0.83) 0%, #007bff 100%);
+   background-color: #013b79;
+
 }
 
+#sidebar i{
+    color: #d97d3e;
+}
+
+#sidebar .sidebar-dropdown-arrow{
+    color: white;
+}
 
 .sidebar-dropdown-arrow{
     margin-top: 5.5px;
